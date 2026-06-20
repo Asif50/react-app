@@ -1,0 +1,21 @@
+
+.productsContainer{
+    display: flex;
+    width: 1000px;
+    height: 400px;
+    box-shadow: 0 0 10px green;
+    margin: 50px auto;
+}
+
+.linksContainer{
+    width: 30%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.componentContainer{
+    width: 70%;
+}

@@ -1,0 +1,29 @@
+{
+  "result": [
+    {
+      "id": "0ba7",
+      "name": "ritik light",
+      "city": "Faridabad"
+    },
+    {
+      "id": "0186",
+      "name": "Asif",
+      "city": "Noida"
+    },
+    {
+      "id": "7262",
+      "name": "Salman",
+      "city": "Delhi"
+    },
+    {
+      "id": "e296",
+      "name": "Karan",
+      "city": "Noida"
+    },
+    {
+      "id": "5ddb",
+      "name": "SixSeven",
+      "city": "GZB"
+    }
+  ]
+}
