@@ -1,0 +1,531 @@
+Functional Component:
+It is a simple JavaScript function whose name starts with uppercase and which return User Interface (JSX or React Elements).
+
+
+There are two types of Components in React
+
+	1. Functional Component
+	2. Class Component (Not Recommended to use)
+
+Components represent View on the screen or on the Web Page
+
+React application is a collection of components.
+
+
+Rendering = calling
+
+	Calls + converted React elements + added in the DOM
+
+What is difference between normal JS function and React Functional Component?
+
+1.	RFC should always start its name with uppercase
+    NJF they can start names with any case (Recommended camel case)
+2.	RFC will always return JSX code
+    NJF can return any type of value
+3.	RFC contains JSX Code
+    NJF does not contains any JSX code.
+
+NOTE:
+Using Attribute concept we can pass arguments to the Components if it is rendered in the element or Tag Format.
+
+Props
+Props are properties of the components
+props are used to paas dynamic data or input data to our components
+Props are used to share the data from parent component to child component
+
+NOTE:
+Functional component first Parameter will be always object,
+This object stores props or this object contains set of props as a properties.
+
+
+It is not fisible to create every component and configure librarires manually
+
+using bundling tool we can create develoment ready folder structure
+
+Bundling tools like [vite, webpack, parcel].
+
+vite:
+Basic React Application
+    installed
+    pre-configured
+    easy and simple to install configure other libraries
+    Optimised code for production
+    Development Server
+    start, stop and loading app or project inside this dev server
+    give URL - to access our application in any browser
+
+Create a Basic React Application using vite
+
+    1. create a folder in any drive and open it in the terminal
+    2. Add the following command to create React Application
+        npm create vite@latest
+    3. Give the Name for the Project
+    4. Select React Options
+    5. Change the Directory to the React Application
+        cd <rectapp-name>
+    6. Add the following command
+        npm install
+    7. Open the ReactApp in VScode
+        code .
+    8. Open the terminal and add the following command to run development server
+        npm run dev
+    9. Open the Browser and the following url to access React Application
+
+
+
+State in React
+
+State is a Special Variable in React, Where we can store any type of data.
+
+State Data we can bind with JSX element
+
+Whenever State gets updated, internally react take care updating UI with new State Data.
+
+How to update the state variable?
+Using setter function i.e. setState() we can update the data of state variable.
+
+setState() is a Asynchronous function
+
+function that is passed as a argument to setState() is called updater function.
+
+Hook
+Any function whose name start with the word use, all those functions are called React Hook.
+
+Rules of React hook
+--------------------
+
+    1. React Hooks we can use only inside the Functional Component
+
+    2. React Hooks should be called on the top level of the FC
+
+    3. Hooks cannot be called Outside the Component or inside JSX or inside any Event Handler.
+
+What is React Hook?
+React Hooks are simple JS function with some rules.
+
+React 16 (Major Changes) ----> FC , CC
+
+
+Rounting in React
+routing is a technique to switch from one component to another component
+routing cannot be implemented using react library
+
+ReactRouter is a Library which implements routing in React Application
+
+ReactRouter Library provides Pre-defined React Component and Hooks using which we can implement routing in React Application.
+
+ex. 
+    BrowserRouter
+    Route
+    Link
+    Outlet
+    Navigate
+    NavLink
+    Routes
+
+    useNavigate()
+    useParams()
+    useSearchParams()
+
+1. Installation of a Library
+    npm install react-router-dom
+
+    npm is Package Manager
+    libraries
+
+Download and Install x Library
+    Location
+    Download
+    install
+    Versioning
+
+Configuration
+---------------
+BrowserRouter is a component created by react-router-dom
+    1. Wrap Parent Component(App) of the Application inside the BrowserRouter Component.
+    2. Change the Browser url path on click of any link.
+        add url paths to the href attribute of the anchor tag
+    3. Configure the Route
+        Based on the Url path, render the component.
+    4. Wrap All <Route/> Component inside the <Routes></Routes> Component.
+    5. Replace All the anchor tag with <Link></Link> component and replace href attribute with to props
+
+What is Single Page Application?
+    Any application which loads a single HTML document in the browser and its content is change dynamically using any JavaScript API's like react, vue or plain js.
+
+gmail (angular)
+Instagrm, Airbnb, Netflix (React)
+gitlabs (Vue)
+
+Nested Routing
+----------------
+
+
+
+
+Props Drilling
+------------------
+Sharing data from Parent to Child comp using props
+This Process is called props Drilling
+
+ Props Drilling
+ 1. Things will become more complex as more components are nested.
+ 2. If any component fails to recieve the data then destination component will never recieve the data.
+ 3. If intermediate component does not require data, then we should make data available to them.
+
+ 
+ Context API
+ ----------------
+ Context Concept is suitable for sharing the data from Parent Comp to Child at any level.
+ 
+ Context api is a simple technique to share data from parent comp to child comp.
+
+
+Props and contextAPI are not recommended when data is passing through child to parent or in-between siblings.
+it is only used to share data parent to child 
+
+
+if we want to share the data from child to parent or in siblings
+we impliments Redux
+
+
+Whenever components get re-render, normal variable will loose its current value.
+State value will not be lost on re-rendering of component
+
+useRef
+---------
+
+Whenever you don't want to show any data on the screen such data should not be stored in the state.
+
+variable to store the data for some logic purpose.
+|
+re-rendered: application will have performance issue
+
+1. I want a variable where i can store the data which i don't want to show on the screen.
+2. Data of that variable should not be loosed on re rendering of the component.
+3. If I update the variable value then My Component should not re-render
+
+
+data => don't want to show on screen (we store in normal variable / but it looses data when component is re render)
+if we store data in state then every time component is re render
+ 
+
+
+where to store the id value, so that we should not loose the id value on re-rendering component and whenever we update id value then component should not get re-render
+
+||
+\/
+
+special referance => useRef() => 
+it will return a object
+{current: <data>}
+
+
+useRef()
+useRef is a hook in React(), It returns one object and that object contains only one property i.e.
+{current: <data>}
+ 
+let myObj = useRef()
+
+If we want we can update the value of current property any number of time,
+updation of current property value will not trigger re-rendering
+
+
+What is useRef()
+How to store the data in the current Property as a value
+
+How to update current Property Value
+
+Component gets re-rendered or not on updating value of current property.
+
+when to store the data in the current Property value.
+
+----------
+story - 1
+----------
+
+useEffect()
+    It is hook in react
+    It is a special function in react.
+
+    What is the Purpose of useEffect()
+    It is used to perform sideEffects in the React Functional Component.
+    or
+    It is used to connect with external system in the React Functional Component.
+
+
+
+What is Pure Function in JS?
+A pure function is a function that always return same result or output
+if the same input or argument passed to the function.
+
+A pure function does not contains any sideEffect
+
+What are sideEffects
+
+
+
+
+
+
+- All react functional component are Pure functions.
+
+Functional Component Does not contains SideEffect.
+
+-sideEffect can be added in the event handlers.
+-useEffect() hook.
+
+What are pure functions
+what is sideEffect
+Where to perform sideEffect in React Functional Component
+What is useEffect and its Purpose
+
+
+
+story - 2
+
+What is LifeCycle of human?
+    period from birth to death
+
+    Child 0-16
+    Young 16-40
+    Old Phase 40+
+
+    Lifecycle of Component
+
+    Once Component loads in the DOM
+
+    Component removed from the DOM
+
+    The process if loading the component in the DOM is called Mounting
+
+    The Process of removing component from the DOM is called Unmounting
+
+    Mount Phase
+
+    Update Phase
+
+    Unmount Phase
+
+
+    How useEffect() hook Works in different Phases of Component Lifecycle?
+
+    How to useEffect() hook works
+
+    useEffect(()=>{},[])
+
+    callback        array
+
+    useEffect( ()=>{
+        return () => {-----------}
+    } )
+
+     useEffect( ()=>{
+        return () => {-----------}
+    },[])
+
+
+    React says:
+    if you are performing any action without using my functionality then all those are side effect.
+
+
+
+
+
+
+useReducer()
+-------------------
+
+- It is a one Hook in React
+- It is used to handle complex data of the Component
+- It has same purpose of useState [i.e. state - store, manage the data]
+
+How to store and manage the data using useReducer() hook
+
+1. import useReducer() hook
+2. Call the useReducer() hook
+    it also return an array and having two elements as useState.
+
+    in useReducer one is state,dispatch [special predefine function]
+
+    let [state, dispatch] = useReducer()
+
+3. useReducer() hook takes two arguments and they are
+
+    1. function (reducer)
+    2. Initial Data
+
+let [state, dispatch] = useReducer(reducerFn, initialData)
+
+initialData is stored in state
+if we want to update state then reducer Function is used to update.
+if we want to call reducer function then we use dispatch
+
+reducer is a user Defined function, which is used to update the state.
+
+Reducer function takes one parameter and that parameter is object type
+
+Reducer function stores a special object in its Parameter and i.e. action object
+
+Reducer function whatever it returns that data will update in the state.
+
+Inside the Reducer Function we have to implement logic to update the state.
+
+dispatch is a pre-defined function
+dispatch is used to call reducer function
+dispatch will re-return the component
+dispatch can take one argument that is action object
+
+action object
+action object is a special object in react
+action object should have one mendatory Property and i.e. type and whose value should be some unique string across the application.
+
+    {
+        type: "<unique string>"
+        data : ""
+    }
+
+Apart from type Property, we can add any number if properties inside the action object.
+
+state
+dispatch
+reducer
+action object
+
+
+Counter App with useReducer() Hook
+
+whenever you are not performing multiple different action then better to go with useState().
+
+if you are going to perform multiple action / operation then we use useReduce().
+
+
+
+Redux 
+
+
+
+this is a separate library.
+it is not a part of React.
+
+
+1. Create a Redux store
+2. Make Redux Store available to each and every component of React Application.
+3. Any Component can store the data in the Redux Store.
+4. Any Component can access the data from Redux Store.
+
+usecase:
+1. Redux Enhance the Performance of the Application
+
+How to Implimant Redux in React Application?
+
+1. Install Redux Library
+    npm install redux
+
+2. Create a Redux Store
+    import
+    use that function
+
+3. Make Redux Store Available to each and every component of the Application
+
+    react-redux is another Library which is used to integrate React with Redux
+
+    npm install react-redux
+
+Redux
+--------
+
+Redux is a JavaScript Library and Pattern
+
+Purpose of Redux
+-----------------
+To manage the state(data) of the application.
+Using redux we can share the data between the components irrespective of the relationship.
+
+
+
+steps:
+
+1. Create the components
+
+2. Create a Redux store.
+    1. install Redux Library (npm i redux)
+    2. import legacy_createStore()
+    3. call the above function
+
+3. Make Redux Store available to all the components of the application
+
+    1. install react-redux (npm i react-redux)
+    2. import Provider Component react-redux Library
+    3. Wrap/Render App Comp inside the Provider Component
+    4. Pass store props to the Provider component and assign redux store a s a value to it.
+
+4. Store the Data from Component into the Redux Store
+
+    Component -----> Redux Store    (storing the data)
+    Redux Store -----> Component (Consume the data)
+
+    1. create a reducer function.
+    2. register reducer function to redux store
+    3. Create a action object and store the component data in the action object as a second property.
+    4. Call the dispatch() from the component and pass action object as a first argument to it.
+    5. Configure a middleware called redux-logger with redux store
+        1. install redux logger (npm i redux-logger)
+        2. import logger
+        3. configure with the store
+    6. Access the data from the Redux Store in the React Component
+        useSelectore(()=>{})
+        - this takes a callback functon
+
+
+Note:- whenever we start react application, internally redux will call reducer() function, and whatever data reducer will return it will store by default inside redux store as a initial data
+
+Note :- 
+----------
+    We can't directly store the data into redux store.
+    we need a reducer function to store the data into the Redux-Store
+
+
+actionCreator
+|
+|
+actionCreator is a simple JS function which returns action object.
+
+Note:
+-------
+ - We can create only one redux store for a application.
+ - Whenever we refresh or reload application, redux data will be removed or it will lost.
+ - we cannot store data in the redux permanently.
+ - redux is used for data/state manegment for perticular session.
+
+
+
+
+
+
+
+JSON SERVER
+
+- It is used to creating our API and test them
+
+1. install jsonserver package
+
+	npm i jsonserver	// old (Now not in use)
+
+	npm install json-server  // latest
+
+2. create db.json file under the application root folder
+
+3. add the required data
+
+4. start the json server
+
+	jsonserver --path path/io/	// (old)
+
+	npx json-server --watch db.json	// (latest)
+
+5. Access the data using following url
+
+	Endpoints for my db :	http://localhost:3000/result
+
+
